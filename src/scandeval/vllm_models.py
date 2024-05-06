@@ -128,7 +128,7 @@ class VLLMModel:
             dtype=dtype,
             enforce_eager=True,
             max_logprobs=10,
-            enable_prefix_caching=False,  # TODO: We will support this in the future
+            enable_prefix_caching=True,
         )
 
         self._model = self._initialise(vllm_kwargs=vllm_kwargs)
